@@ -1,38 +1,790 @@
-.App {
+.navbar {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar div:nth-child(1) {
+  width: 20%;
+}
+.navbar div:nth-child(2) {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  text-align: left;
+  font: normal normal normal 1.1vw/1.3vw Montserrat;
+  letter-spacing: 0px;
+  color: #080808;
+  opacity: 1;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-container div:nth-child(2) {
+  min-width: 35%;
+}
+/* .nav-container div:nth-child(3),
+.nav-container div:nth-child(4) {
+  min-width: 10%;
+} */
+
+.navlink {
+  text-decoration: none;
+  color: black;
+  /* width: 6vw; */
+}
+.navbar img {
+  height: 100%;
+  margin-left: 35px;
+}
+
+.icon {
+  height: 50%;
+}
+
+.active {
+  font-weight: 500;
+}
+
+/* Black Tile with React Logo */
+
+.tile {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-tile {
+  width: 85%;
+  height: 6vw;
+  background: black;
+  border-radius: 4px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  overflow: hidden;
+}
+.react-tile img {
+  height: 100%;
+}
+.react-tile p {
+  width: 22%;
+  padding-left: 1.5vw;
+  padding-top: 1vw;
+  margin: 0;
+  font: normal normal 500 1.2vw/1.5vw Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+/* Implementing DashBoard */
+.main {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  /* border: 2px solid; */
+  width: 100%;
+  height: calc(100vh - (185px)); /*60+90+15
+  /* height: 500px; */
+}
+
+.container {
+  width: 85%;
+  margin-top: 1vw;
+  height: 94%;
+  /* border: 2px solid; */
+  display: flex;
+  justify-content: space-between;
+}
+.course-table {
+  width: 70%;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+}
+.cart {
+  width: 28%;
+  /* height: 82%; */
+  height: 88%;
+  /* margin-top: 4.3%; */
+  /* border: 2px solid; */
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+/* .sorting_01 {
+  height: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* Need to implememnt the background of dropdown */
+
+.course-content {
+  height: 89%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.course-content > div {
+  min-height: 13%;
+  max-height: 13%;
+
+  /* border: 2px solid; */
+}
+
+.course {
+  height: 100%;
+  /* min-width: 30%; */
+  margin-bottom: 0.7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #f4f4f4;
+  border-radius: 0px 0px 4px 4px;
+  opacity: 1;
+}
+/* .course > div {
+  width: 12%;
+  height: 100%;
+  border: 2px solid;
+} */
+
+.square {
+  width: 7%;
+  height: 70%;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  opacity: 1;
+  position: relative;
+  margin-left: 2%;
+}
+.title-container {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.title {
+  /* border: 2px solid black; */
+  text-align: left;
+  font: normal normal 500 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #080808;
+  opacity: 1;
+  word-wrap: break-word;
+}
+.tags {
+  /* border: 2px solid black; */
+  font: normal normal 400 0.7vw/1vw Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+.tags > span {
+  background-color: #ff6738;
   text-align: center;
+  color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 2px 20px;
+  border-radius: 4px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.author {
+  /* border: 2px solid; */
+  width: 15%;
+  height: 100%;
+  position: relative;
+  top: 40%;
+  font: normal normal 400 0.7vw/1vw Montserrat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-to-wishlist {
+  width: 3%;
+  /* border: 2px solid; */
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.star {
+  position: relative;
+  top: 25%;
+  height: 50%;
+  width: 80%;
+  /* border: 2px solid; */
+  cursor: pointer;
+}
+
+.price {
+  /* border: 2px solid; */
+  width: 8%;
+  text-align: left;
+  font: normal normal bold 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #080808;
+  opacity: 1;
+  text-align: center;
+  position: relative;
+}
+
+.discount {
+  /* border: 2px solid; */
+  width: 8%;
+  text-align: center;
+  position: relative;
+  font: normal normal 400 0.8vw/1vw Montserrat;
+  text-decoration: line-through;
+}
+.add_to_cart {
+  /* border: 2px solid; */
+  height: 100%;
+  width: 15%;
+  text-align: center;
+  position: relative;
+}
+.add_to_cart button {
+  background-color: #ff6738;
+  font: normal normal 500 0.8vw/1vw Montserrat;
+  color: white;
+  position: relative;
+  top: 25%;
+  padding: 0.8vw 1vw;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.display_course {
+  width: 2%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+/* Mini Cart on Landing Page Styling */
+
+.mini_cart {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mini_cart_details {
+  height: 6%;
+  width: 90%;
+  font: normal normal 500 1.1vw/1.3vw Montserrat;
+  letter-spacing: 0px;
+  color: #080808;
+  opacity: 1;
+  text-align: center;
+  margin-top: 0.8vw;
+  margin-left: 1.3vw;
+}
+
+.mini_cart_item_container {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  height: 70%;
+  width: 90%;
+
+  margin: 1vw;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.mini_cart_item_container > div {
+  min-height: 30%;
+  width: 100%;
+}
+
+.mini_cart_value {
+  height: 15%;
+  width: 90%;
+  margin: 0 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.total_price_label_mini_cart {
+  height: 20%;
+  font: normal normal normal 0.9vw/1vw Montserrat;
+  margin: 0;
+}
+
+.total_price_mini_cart {
+  font: normal normal bold 1.5vw/1.8vw Montserrat;
+  padding: 1vw 0;
+  height: 80%;
+  margin: 0;
+  /* border: 2px solid; */
+  vertical-align: left;
+}
+
+.empty_mini_cart {
+  text-align: left;
+  font: italic normal 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #aaaaaa;
+  opacity: 1;
+}
+
+.item_mini_cart {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  /* width: 100%; */
+}
+.mini_cart_name_square {
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid; */
+  font: normal normal 500 1.2vw/1.5vw Montserrat;
+}
+.mini_cart_square {
+  margin: 0.5vw;
+  height: 80%;
+  width: 20%;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+}
+.mini_cart_name {
+  margin: 0.1vw;
+  height: 100%;
+  width: 80%;
+  /* border: 2px red solid; */
+}
+
+.mini_cart_item_price {
+  padding-left: 15vw;
+  font: normal normal bold 1.2vw/1.5vw Montserrat;
+}
+
+.searching_sorting {
+  width: 85%;
+  height: 6%;
+  /* border: 2px solid; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting {
+  width: 70%;
+  /* border: 1px red solid; */
+  display: flex;
+  justify-content: space-between;
+}
+.sorting p {
+  height: 100%;
+  margin: 0.7vw 1.3vw;
+  vertical-align: middle;
+  text-align: left;
+  font: normal normal 500 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #0f1317;
+  opacity: 1;
+}
+
+.sorting select {
+  width: 20%;
+  text-align: center;
+
+  font: normal normal 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #0f1317;
+  opacity: 1;
+  border-radius: 4px;
+}
+.searching {
+  width: 28%;
+  height: 100%;
+  /* border: 1px red solid; */
+  display: flex;
+  justify-content: space-between;
+}
+.searching > input {
+  /* height: 100%; */
+  width: 85%;
+  border: none;
+  background: #eff2ff 0% 0% no-repeat padding-box;
+}
+
+.searching > button {
+  width: 15%;
+  background-color: #ff6738;
+  border: none;
+}
+
+.delete-icon {
+  height: 30%;
+  width: 2%;
+  cursor: pointer;
+}
+
+/* Cart Design */
+
+.my-cart-container {
+  width: 100%;
+  /* height: 50%; */
+  /* position: relative; */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  /* border: 2px solid; */
+  /* width: 100%; */
+  height: calc(100vh - (185px));
+}
+
+.my-cart-main {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-count {
+  height: 6%;
+  font: normal normal 600 1.2vw/1.5vw Montserrat;
+  margin-left: 1vw;
+}
+.my-cart-area {
+  height: 94%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.item_container {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.check-out {
+  height: 35%;
+  width: 28%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #e0e0e0;
+  opacity: 1;
+}
+.check-out > p {
+  height: 5%;
+  margin: 1vw;
+}
+.check-out button {
+  background-color: #ff6738;
+  font: normal normal 500 0.8vw/1vw Montserrat;
+  color: white;
+  width: 80%;
+  height: 20%;
+  padding: 0.8vw 2vw;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-left: 1vw;
+}
+
+.item_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_container1 {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  overflow: auto;
+}
+.item {
+  min-height: 30%;
+  max-height: 30%;
+  border: 2px solid black;
+  /* min-width: 30%; */
+  margin-bottom: 0.7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #f4f4f4;
+  border-radius: 0px 0px 4px 4px;
+  opacity: 1;
+}
+
+.item_container2 {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e0e0e0;
+  opacity: 1;
+}
+.item_container2 > div {
+  height: 30%;
+  width: 90%;
+}
+
+.item_container2 > p {
+  font: normal normal 600 18px/22px Montserrat;
+  color: #4e4e4e;
+}
+
+.square_01 {
+  width: 7%;
+}
+
+.title-author {
+  width: 30%;
+  margin-right: 10vw;
+}
+
+.delete_icon_01 {
+  width: 10%;
+}
+.delete_icon_01 > img {
+  width: 20%;
+}
+
+.add-to-cart-01 {
+  color: #1873ce;
+
+  font-size: small;
+  opacity: 1;
+  padding: 0.1vw 0.4vw;
+  cursor: pointer;
+}
+
+.add-to-cart-01:hover {
+  border: 1px #1873ce solid;
+}
+
+/* Course Details */
+.course-details {
+  margin-top: 15px;
+  width: 100%;
+  height: calc(100vh - (185px));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.course-nav {
+  margin-left: 1vw;
+  height: 5%;
+  font: normal normal 400 1vw/1.5vw Montserrat;
+  letter-spacing: 0px;
+  color: #0f1317;
+  opacity: 1;
+  float: left;
+}
+
+.banner {
+  height: 40%;
+  width: 100%;
+  height: 30%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.title_container {
+  width: 85%;
+}
+
+.main_title {
+  margin-top: 1vw;
+  margin-left: 1vw;
+}
+
+.mini_title {
+  margin-left: 1vw;
+  margin-top: 0.5vw;
+  text-align: left;
+  font: normal normal 300 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.course_detail_author {
+  text-align: left;
+  font: normal normal 200 1vw/1.2vw Montserrat;
+  letter-spacing: 0px;
+  color: #ff9271;
+  opacity: 1;
+  margin-top: 3vw;
+  margin-left: 1vw;
+}
+.main_title {
+  text-align: left;
+  font: normal normal 600 24px/29px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.course_details_tags {
+  font: normal normal 400 0.7vw/1vw Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+  margin-top: 2vw;
+  margin-left: 1vw;
+}
+.course_details_tags > span {
+  background: white;
+  border-radius: 4px;
+  opacity: 1;
+  text-align: center;
+  color: black;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 2px 20px;
+  border-radius: 4px;
+}
+.desc-container {
+  height: 50%;
+  width: 85%;
+  display: flex;
+}
+
+.description {
+  margin-top: 1vw;
+  width: 50%;
+  text-align: left;
+  font: normal normal 300 1vw/1.3vw Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding: 1vw;
+  border: 1px solid #e0e0e0;
+}
+
+.description > p {
+  font: normal normal 500 1vw/1.5vw Montserrat;
+}
+
+.course-details-cart {
+  width: 42.5%;
+  height: 80%;
+  bottom: 14%;
+  left: 50%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vw;
+}
+
+.video {
+  width: 80%;
+  height: 50%;
+  border: 1px solid #e0e0e0;
+  margin-top: 5%;
+  background-color: black;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.video img {
+  width: 8%;
+  cursor: pointer;
+}
+
+.course_details_price {
+  display: flex;
+  flex-direction: column;
+}
+
+.customprice {
+  width: 30%;
+  height: 10%;
+  margin-bottom: 1vw;
+  font: normal normal bold 1.5vw/1.8vw Montserrat;
+}
+
+.custom-discount {
+  width: 22%;
+  height: 10%;
+  font-size: medium;
+  margin-top: 0;
+  font: normal normal 300 1vw/1.2vw Montserrat;
+}
+
+.course_details_price {
+  width: 80%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  height: 50%;
+  border: 1px solid #e0e0e0;
+}
+
+.hours-left {
+  color: #ff6738;
+  font: normal normal 400 1vw/1.2vw Montserrat;
+  width: 48%;
+  text-decoration: none;
+}
+
+.course_details_button {
+  display: inline;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.course_details_button button {
+  width: 42%;
+  height: 80%;
+  background-color: #ff6738;
   color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* Pop Up */
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
 }
